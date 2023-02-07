@@ -34,8 +34,8 @@ eureka:
     instance-info-replication-interval-seconds: 10
     registry-fetch-interval-seconds: 10
   instance:
-    appname: nibssigree
-    instanceId: nibssigree:${spring.application.instance-id:${random.value}}
+    appname: nibss-igree
+    instanceId: nibss-igree:${spring.application.instance-id:${random.value}}
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
     status-page-url-path: ${management.endpoints.web.base-path}/info
@@ -124,7 +124,7 @@ management:
 
 spring:
   application:
-    name: nibssigree
+    name: nibss-igree
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by maven when building the JAR file
@@ -162,7 +162,7 @@ spring:
       hibernate.cache.hazelcast.instance_name: nibssigree
       hibernate.cache.hazelcast.use_lite_member: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
